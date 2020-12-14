@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +21,39 @@
         </div>
         <div class="row">
             <div class="col">
-                <h1>Hello student table</h1>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Age</th>
+                      <th scope="col">Year</th>
+                      <th scope="col">Math</th>
+                      <th scope="col">Physical</th>
+                      <th scope="col">Chemistry</th>
+                      <th scope="col"></th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <c:forEach var ="item" items ="${students}">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>${item.getName()}</td>
+                        <td>${item.getAge()}</td>
+                        <td>${item.getYear()}</td>
+                        <td>${item.getMath()}</td>
+                        <td>${item.getPhysical()}</td>
+                        <td>${item.getChemistry()}</td>
+                        <td><button type="button" class="btn btn-primary me-2">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                        
+                      </tr>
+                    </c:forEach>
+                    
+                  </tbody>
+                </table>
             </div>
         </div>
     </div>

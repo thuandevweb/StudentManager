@@ -22,7 +22,6 @@
             <div class="col">
                 <div class="d-flex justify-content-center my-4">
                   
-                  <h1>Student Summary</h1>
                 </div>
             </div>
         </div>

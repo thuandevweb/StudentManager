@@ -1,31 +1,26 @@
 package com.example.studentmanagerdemoapp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "student")
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+@Document(collection = "student")
 public class Student {
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String id;
 
-    @Column(name = "name")
+    @Field
     String name;
-    @Column(name = "age")
+    @Field
     int age;
-    @Column(name = "year")
+    @Field
     int year;
-    @Column(name = "math")
+    @Field
     double math;
-    @Column(name = "physical")
+    @Field
     double physical;
-    @Column(name = "chemistry")
+    @Field
     double chemistry;
 
     public void setId(String id) {

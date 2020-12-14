@@ -1,5 +1,5 @@
 package com.example.studentmanagerdemoapp;
 
-public class StudentRepository {
-
+public interface StudentRepository {
+    Student getStudentByName(String name);
 }
